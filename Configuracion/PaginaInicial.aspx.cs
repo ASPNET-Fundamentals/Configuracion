@@ -20,7 +20,15 @@ namespace Configuracion
             Response.Write("<BR/>");
             Response.Write(string.Concat("Valor Key EjemploKeyExternal: ", ejemploKeyExternal));
             Response.Write("<BR/>");
-            Response.Write(string.Concat("Value Key stringConnection: ", stringConnection));            
+            Response.Write(string.Concat("Value Key stringConnection: ", stringConnection));
+
+
+            //throw new Exception("Error test");
+
+            //Response.Write("<BR/>");
+            //Response.Write(string.Concat("Cantidad de visitas session: ", Session["visitas"]));
+            //Response.Write("<BR/>");
+            //Response.Write(string.Concat("Cantidad de visitas application: ", Application["visitas"]));
         }
     }
 }
