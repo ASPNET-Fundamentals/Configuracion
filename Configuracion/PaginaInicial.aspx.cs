@@ -1,34 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace Configuracion
 {
-    public partial class Default : System.Web.UI.Page
+    public partial class PaginaInicial : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string ejemploKey = ConfigurationManager.AppSettings["EjemploKey"];
-            string ejemploKeyExternal = ConfigurationManager.AppSettings["EjemploKeyExternal"];
-            string stringConnection = ConfigurationManager.ConnectionStrings["Conexion"].ConnectionString;
-
-            Response.Write(string.Concat("Value Key EjemploKey: ", ejemploKey));
-            Response.Write("<BR/>");
-            Response.Write(string.Concat("Valor Key EjemploKeyExternal: ", ejemploKeyExternal));
-            Response.Write("<BR/>");
-            Response.Write(string.Concat("Value Key stringConnection: ", stringConnection));
-
-
-            //throw new Exception("Error test");
-
-            //Response.Write("<BR/>");
-            //Response.Write(string.Concat("Cantidad de visitas session: ", Session["visitas"]));
-            //Response.Write("<BR/>");
-            //Response.Write(string.Concat("Cantidad de visitas application: ", Application["visitas"]));
+            throw new Exception("error test");
         }
     }
 }

@@ -9,10 +9,6 @@ namespace Configuracion
 {
     public class Global : System.Web.HttpApplication
     {
-        private int contadorApplication;
-        private int contadorSession;
-
-
         /// <summary>
         /// Se ejectura cuando inicia la aplicación
         /// </summary>
@@ -20,8 +16,7 @@ namespace Configuracion
         /// <param name="e"></param>
         protected void Application_Start(object sender, EventArgs e)
         {
-            contadorApplication = 0;
-            contadorSession = 0;
+            
         }
 
         /// <summary>
@@ -30,9 +25,17 @@ namespace Configuracion
         /// <param name="sender"></param>
         /// <param name="e"></param>
         protected void Session_Start(object sender, EventArgs e)
-        {           
-            Application["visitas"] = contadorApplication++;
-            Session["visitas"] = contadorSession++;
+        {
+            if (Application["visitas"] == null)
+            {
+                Application["visitas"] = 1;
+            }
+            else
+            {
+                Application["visitas"] = ((int)Application["visitas"] + 1);
+            }
+            
+            Session["sessionID"] = Session.SessionID;
         }
 
 
@@ -72,8 +75,7 @@ namespace Configuracion
 
             if (httpEx == null || httpEx.GetHttpCode() != 404)
             {
-                Session["LastException"] = ex;
-                Application["LastException"] = ex;                
+                Application["LastException"] = ex;
             }
         }
             

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="PaginaInicial.aspx.cs" Inherits="Configuracion.PaginaInicial" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="EjemploCache.aspx.cs" Inherits="Configuracion.EjemploCache" %>
 
 <!DOCTYPE html>
 
